@@ -22,9 +22,9 @@ interface printTeacherFunction {
   (teacher: TeacherName): string;
 }
 
-//Implement the function correctly
-const printTeacher: printTeacherFunction = (teacher) => {
+function printTeacher(teacher: TeacherName) {
   return `${teacher.firstName[0]}. ${teacher.lastName}`;
-};
+}
 
+export { printTeacher };
 console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
