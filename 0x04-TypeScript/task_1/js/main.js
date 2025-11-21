@@ -1,7 +1,6 @@
-function printTeacher(firstName, lastName) {
-    return firstName + " " + lastName;
-}
-var printTeacherFunc = function (firstName, lastName) {
-    return firstName + " " + lastName;
+//Implement the function correctly
+var printTeacher = function (teacher) {
+    return "".concat(teacher.firstName[0], ". ").concat(teacher.lastName);
 };
-console.log(printTeacherFunc("John", "Doe")); // John Doe
+console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
+console.log(printTeacher({ firstName: "Kess", lastName: "Obehi" }));
