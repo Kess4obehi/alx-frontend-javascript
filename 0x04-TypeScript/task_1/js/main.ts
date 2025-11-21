@@ -30,7 +30,7 @@ interface StudentConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
 
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   // 1. The storage spots (Properties)
   firstName: string;
   lastName: string;
