@@ -27,4 +27,4 @@ function printTeacher(teacher: TeacherName): string {
 }
 
 export { printTeacher };
-console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
+
