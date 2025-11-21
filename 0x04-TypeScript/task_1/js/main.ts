@@ -22,7 +22,7 @@ interface printTeacherFunction {
   (teacher: TeacherName): string;
 }
 
-function printTeacher(teacher: TeacherName) {
+function printTeacher(teacher: TeacherName): string {
   return `${teacher.firstName[0]}. ${teacher.lastName}`;
 }
 
