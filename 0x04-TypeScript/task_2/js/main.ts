@@ -15,7 +15,7 @@ class Director implements DirectorInterface {
     return "Working from home";
   }
   getCoffeeBreak(): string {
-    return "Working from home";
+    return "Getting a coffee break";
   }
   workDirectorTasks(): string {
     return "Getting to director tasks";
@@ -36,7 +36,7 @@ class Teacher implements TeacherInterface {
 
 function createEmployee(salary: number | string): Director | Teacher {
   // Check if salary is a number AND less than 500
-  if (typeof salary === "number" && salary < 500) {
+  if (salary < 500) {
     return new Teacher();
   } else {
     return new Director();
