@@ -69,3 +69,18 @@ console.log(executeWork(createEmployee(200)));
 
 // Test 2: Salary 1000 (Director)
 console.log(executeWork(createEmployee(1000)));
+
+// The Exclusive List (String Literal Type)
+type Subjects = 'Math' | 'History';
+// The Teacher Function
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return "Teaching Math";
+  } else if (todayClass === 'History') {
+    return 'Teaching History';
+  }
+}
+// Testing (To see the expected result)
+// -----------------------------------------------------------
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
