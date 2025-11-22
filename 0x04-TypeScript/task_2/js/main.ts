@@ -48,3 +48,24 @@ function createEmployee(salary: number | string): Director | Teacher {
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
+
+function isDirector(employee: Director | Teacher): employee is Director {
+  return (employee as Director).workDirectorTasks !== undefined;
+}
+
+function executeWork(employee: Teacher | Director): string {
+  // If the Security Guard (isDirector) says YES:
+  if (isDirector(employee)) {
+    return employee.workDirectorTasks();
+  }
+  // If the Security Guard says NO, it must be the only other option (Teacher):
+  return employee.workTeacherTasks();
+}
+
+// --- Specific Tests for executeWork ---
+
+// Test 1: Salary 200 (Teacher)
+console.log(executeWork(createEmployee(200)));
+
+// Test 2: Salary 1000 (Director)
+console.log(executeWork(createEmployee(1000)));
