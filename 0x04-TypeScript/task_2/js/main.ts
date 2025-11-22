@@ -73,7 +73,7 @@ console.log(executeWork(createEmployee(1000)));
 // The Exclusive List (String Literal Type)
 type Subjects = 'Math' | 'History';
 // The Teacher Function
-function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass:Subjects): string {
   if (todayClass === 'Math') {
     return "Teaching Math";
   } else if (todayClass === 'History') {
